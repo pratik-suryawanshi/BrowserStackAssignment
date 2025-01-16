@@ -48,13 +48,14 @@ public class BaseTest {
         } else {
             // BrowserStack WebDriver Setup
             System.out.println("Running tests on BrowserStack...");
-            Properties browserStackProps = new Properties();
+            Properties browserStackProps = new Properties();;
             browserStackProps.load(Files.newInputStream(Paths.get(Constants.BROWSERSTACK_PROPERTIES_PATH)));
 
             // BrowserStack options
             Map<String, Object> browserstackOptions = new HashMap<>();
             browserstackOptions.put("userName", browserStackProps.getProperty("browserstack.user"));
             browserstackOptions.put("accessKey", browserStackProps.getProperty("browserstack.key"));
+            browserstackOptions.put("buildName", browserStackProps.getProperty("browserstack.buildName")); // Set your build name here
             browserstackOptions.put("consoleLogs", "verbose");
             browserstackOptions.put("networkLogs", true);
             browserstackOptions.put("debug", true);

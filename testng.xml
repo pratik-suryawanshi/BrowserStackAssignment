@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Test Suite with Local and Remote Options" parallel="tests" thread-count="5">
 
-    <!-- Local Execution -->
-    <test name="Local Tests">
+    <!--Local Execution -->
+    <!--<test name="Local Tests">
         <parameter name="runLocal" value="true" />
         <parameter name="browser" value="chrome" />
         <parameter name="platform" value="Windows 10" />
@@ -11,12 +11,12 @@
             <class name="com.example.browserstack.ScrapeArticlesTest" />
             <class name="com.example.browserstack.TranslateHeadersTest" />
         </classes>
-    </test>
+    </test>-->
 
     <!--BrowserStack Execution -->
 
     <!-- Chrome on Windows 10 -->
-    <!--<test name="BrowserStack - Chrome on Windows">
+    <test name="BrowserStack - Chrome on Windows">
         <parameter name="runLocal" value="false" />
         <parameter name="browser" value="chrome" />
         <parameter name="platform" value="Windows 10" />
@@ -27,7 +27,7 @@
         </classes>
     </test>
 
-    &lt;!&ndash;Firefox on Windows 11" &ndash;&gt;
+    <!--Firefox on Windows 11" -->
   <test name="BrowserStack - Firefox on Windows">
       <parameter name="runLocal" value="false" />
       <parameter name="browser" value="Firefox" />
@@ -39,7 +39,7 @@
       </classes>
   </test>
 
-  &lt;!&ndash; Edge on Windows 11 &ndash;&gt;
+  <!-- Edge on Windows 11 -->
     <test name="BrowserStack - Edge on Windows">
         <parameter name="runLocal" value="false" />
         <parameter name="browser" value="edge" />
@@ -51,7 +51,7 @@
         </classes>
     </test>
 
-    &lt;!&ndash; Safari on iPhone 14 &ndash;&gt;
+    <!-- Safari on iPhone 14 -->
     <test name="BrowserStack - Safari on iPhone">
         <parameter name="runLocal" value="false" />
         <parameter name="browser" value="Safari" />
@@ -65,7 +65,7 @@
         </classes>
     </test>
 
-    &lt;!&ndash; Chrome on Samsung Galaxy S22 &ndash;&gt;
+    <!-- Chrome on Samsung Galaxy S22 -->
     <test name="BrowserStack - Chrome on Galaxy S22">
         <parameter name="runLocal" value="false" />
         <parameter name="browser" value="Chrome" />
@@ -77,6 +77,6 @@
             <class name="com.example.browserstack.ScrapeArticlesTest" />
             <class name="com.example.browserstack.TranslateHeadersTest" />
         </classes>
-    </test>-->
+    </test>
 
 </suite>
